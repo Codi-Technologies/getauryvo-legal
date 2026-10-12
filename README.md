@@ -8,7 +8,7 @@ This repository contains the official plain HTML and CSS website for Auryvo:
 - `/support/`
 - `/delete-account/`
 
-Natalie Lehman approved the legal copy on October 2, 2026. The approved policies use October 2, 2026 as their effective date.
+Auryvo LLC approved the legal copy on October 2, 2026. The approved policies use October 2, 2026 as their effective date.
 
 For local development from the repository root:
 
