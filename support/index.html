@@ -11,6 +11,8 @@
   <meta property="og:description" content="Help with Auryvo accounts, subscriptions, notifications, privacy, and deletion.">
   <link rel="icon" type="image/png" href="/assets/brand-icon.png">
   <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/support-form.css">
+  <script src="/assets/support-form.js" defer></script>
   <title>Support — Auryvo</title>
 </head>
 <body>
@@ -36,12 +38,53 @@
         <div>
           <p class="eyebrow">Auryvo support</p>
           <h1>How can we help?</h1>
-          <p class="lede">For account, billing, privacy, or technical help, email Auryvo Support. Do not include your password, sign-in link, Apple transaction data, or private rehearsal text.</p>
+          <p class="lede">Tell us what’s happening and we’ll help you find the next step. You can use the form below or email Auryvo Support.</p>
         </div>
         <a class="email-link" href="mailto:hello@getauryvo.com">hello@getauryvo.com</a>
       </header>
 
-      <p class="draft-notice">Email is the support channel for Auryvo. No response time is promised.</p>
+      <section class="support-contact" aria-labelledby="contact-title">
+        <div class="contact-guidance">
+          <h2 id="contact-title">Send us a message.</h2>
+          <p>For account, billing, maintenance, or technical help. No response time is promised.</p>
+          <p id="message-safety">Please leave out passwords, sign-in links, Apple transaction data, and private rehearsal text.</p>
+          <p class="contact-disclosure">Your message and reply email are sent to Auryvo Support and copied to our technical support team at Codi. See our <a href="/privacy/">Privacy Policy</a>.</p>
+        </div>
+        <form id="support-form" action="https://ikmgbjeprheokxojehwd.supabase.co/functions/v1/support-request" method="post" aria-label="Contact Auryvo Support">
+          <div class="contact-field">
+            <label for="support-name">Name <span>(optional)</span></label>
+            <input id="support-name" name="name" type="text" autocomplete="name" maxlength="100">
+          </div>
+          <div class="contact-field">
+            <label for="support-email">Your email</label>
+            <input id="support-email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="reply-hint">
+            <p id="reply-hint" class="field-hint">We’ll reply to this address.</p>
+          </div>
+          <div class="contact-field">
+            <label for="support-topic">What do you need help with?</label>
+            <select id="support-topic" name="topic" required>
+              <option value="">Choose a topic</option>
+              <option value="technical">Technical issue or maintenance</option>
+              <option value="account">Account or sign-in</option>
+              <option value="billing">Subscription or billing</option>
+              <option value="privacy">Privacy or account deletion</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="contact-field">
+            <label for="support-message">Your message</label>
+            <textarea id="support-message" name="message" rows="6" minlength="10" maxlength="4000" required aria-describedby="message-safety message-hint"></textarea>
+            <p id="message-hint" class="field-hint">What happened, and what were you expecting? Up to 4,000 characters.</p>
+          </div>
+          <div class="contact-trap" aria-hidden="true" inert>
+            <label for="support-website">Leave this field empty</label>
+            <input id="support-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="contact-submit" type="submit" disabled>Send message</button>
+          <p id="support-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
+          <noscript><p>Please enable JavaScript to use this form, or email <a href="mailto:hello@getauryvo.com">hello@getauryvo.com</a>.</p></noscript>
+        </form>
+      </section>
 
       <section class="section" aria-labelledby="help-topics">
         <div class="section-heading">
