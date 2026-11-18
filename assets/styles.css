@@ -261,6 +261,7 @@ li {
 }
 
 .availability {
+  text-decoration: none;
   display: inline-flex;
   min-height: 56px;
   align-items: center;
