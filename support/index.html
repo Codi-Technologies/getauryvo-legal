@@ -47,8 +47,6 @@
         <div class="contact-guidance">
           <h2 id="contact-title">Send us a message.</h2>
           <p>For account, billing, maintenance, or technical help. No response time is promised.</p>
-          <p id="message-safety">Please leave out passwords, sign-in links, Apple transaction data, and private rehearsal text.</p>
-          <p class="contact-disclosure">Your message and reply email are sent to Auryvo Support and copied to our technical support team at Codi. See our <a href="/privacy/">Privacy Policy</a>.</p>
         </div>
         <form id="support-form" action="https://ikmgbjeprheokxojehwd.supabase.co/functions/v1/support-request" method="post" aria-label="Contact Auryvo Support">
           <div class="contact-field">
@@ -73,7 +71,7 @@
           </div>
           <div class="contact-field">
             <label for="support-message">Your message</label>
-            <textarea id="support-message" name="message" rows="6" minlength="10" maxlength="4000" required aria-describedby="message-safety message-hint"></textarea>
+            <textarea id="support-message" name="message" rows="6" minlength="10" maxlength="4000" required aria-describedby="message-hint"></textarea>
             <p id="message-hint" class="field-hint">What happened, and what were you expecting? Up to 4,000 characters.</p>
           </div>
           <div class="contact-trap" aria-hidden="true" inert>
